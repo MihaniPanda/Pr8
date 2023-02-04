@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавление паспорта</title>
+    <div th:insert="Header/header" ></div>
+</head>
+<body>
+<form th:action="${'/passport/add'}" th:object="${passporte}" method="post">
+    <h1 style="text-align: center; margin-top: 10px">Добавление паспорта</h1>
+
+    <h4 >Введите данные</h4>
+    <input style="padding: 5px; margin: 5px;"  type="text" name="number" placeholder="Номер паспорта">
+    <div style="color: red" th:if="${#fields.hasErrors('number')}" th:errors="*{number}"></div><br />
+    <input style="padding: 5px; margin: 5px;" type="text" name="series" placeholder="Серия паспорта">
+    <div style="color: red" th:if="${#fields.hasErrors('series')}" th:errors="*{series}"></div><br/>
+    <button type="submit">Добавить паспорт</button>
+</form>
+</body>
+</html>

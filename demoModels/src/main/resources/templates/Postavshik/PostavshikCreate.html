@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавление поставщика</title>
+    <div th:insert="Header/header" ></div>
+</head>
+<body>
+<form th:action="${'/postavshik/add'}" th:object="${postavshike}" method="post">
+    <h1 style="text-align: center; margin-top: 10px">Добавление поставщика</h1>
+
+    <h4 >Введите данные</h4>
+    <input style="padding: 5px; margin: 5px;"  type="text" name="name" placeholder="Имя поставщика">
+    <div style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div><br />
+
+    <input style="padding: 5px; margin: 5px;"  type="text" name="nameorganizachia" placeholder="Наименование организации">
+    <div style="color: red" th:if="${#fields.hasErrors('nameorganizachia')}" th:errors="*{nameorganizachia}"></div><br />
+
+    <input style="padding: 5px; margin: 5px;"  type="text" name="patronymic" placeholder="Отчество поставщика">
+    <div style="color: red" th:if="${#fields.hasErrors('patronymic')}" th:errors="*{patronymic}"></div><br />
+
+    <input style="padding: 5px; margin: 5px;"  type="text" name="surname" placeholder="Фамилия поставщика">
+    <div style="color: red" th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}"></div><br />
+    <button type="submit">Добавить поставщика</button>
+</form>
+</body>
+</html>

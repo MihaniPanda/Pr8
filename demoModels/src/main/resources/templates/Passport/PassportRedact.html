@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Изминение паспорта</title>
+  <div th:insert="Header/header" ></div>
+</head>
+<body>
+<form  method="post" th:action="@{/passport/edit/{id}(id=${passports.id})}" th:object="${passports}">
+  <input style="padding: 5px; margin: 5px;" type="text" name="number" placeholder="Номер паспорта" th:value="*{number}" >
+  <div style="color: red" th:if="${#fields.hasErrors('number')}" th:errors="*{number}"></div><br />
+  <input style="padding: 5px; margin: 5px;" type="text" name="series" placeholder="Серия паспорта" th:value="*{series}">
+  <div style="color: red" th:if="${#fields.hasErrors('series')}" th:errors="*{series}"></div><br />
+  <br>
+  <button type="submit">Изменить данные паспорта</button>
+</form>
+<div style="padding-top: 13px;">
+  <form  th:action="@{/jobtitle/remove/{id}(id=${passports.id})}" th:object="${passports}" method="post">
+    <button type="submit" > Удалить </button>
+  </form>
+</div>
+</body>
+</html>

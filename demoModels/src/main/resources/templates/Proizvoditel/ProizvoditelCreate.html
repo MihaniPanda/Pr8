@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавление производителя</title>
+    <div th:insert="Header/header" ></div>
+</head>
+<body>
+<form th:action="${'/proizvoditel/add'}" th:object="${proizvoditele}" method="post">
+    <h1 style="text-align: center; margin-top: 10px">Добавление производителя</h1>
+
+    <h4 >Введите данные</h4>
+    <input style="padding: 5px; margin: 5px;"  type="number" name="INN" placeholder="ИНН">
+    <div style="color: red" th:if="${#fields.hasErrors('INN')}" th:errors="*{INN}"></div><br />
+    <input style="padding: 5px; margin: 5px;"  type="text" name="name" placeholder="Наименование">
+    <div style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div><br />
+    <button type="submit">Добавить производителя</button>
+</form>
+</body>
+</html>

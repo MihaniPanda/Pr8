@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Изминение сертификата</title>
+    <div th:insert="Header/header" ></div>
+</head>
+<body>
+<form  method="post" th:action="@{/certificate/edit/{id}(id=${certificates.id})}" th:object="${certificates}">
+    <input style="padding: 5px; margin: 5px;" type="date" name="data" placeholder="Дата выдачи" th:value="*{data}" >
+    <div style="color: red" th:if="${#fields.hasErrors('data')}" th:errors="*{data}"></div><br />
+    <input style="padding: 5px; margin: 5px;" type="text" name="name" placeholder="Наименование" th:value="*{name}">
+    <div style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div><br />
+    <br>
+    <button type="submit">Изменить данные сертификата</button>
+</form>
+<div style="padding-top: 13px;">
+    <form  th:action="@{/certificate/remove/{id}(id=${certificates.id})}" th:object="${certificates}" method="post">
+        <button type="submit" > Удалить </button>
+    </form>
+</div>
+</body>
+</html>

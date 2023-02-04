@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Пользователи</title>
+    <div th:insert="Header/header" ></div>
+
+</head>
+<body>
+<h1 style="text-align: center; margin-bottom: 30px;" >Пользователи</h1>
+
+<div class="container">
+    <table style="border-collapse: collapse; font-size: 20px; border: 2px solid #0a0a0a; width: 100%; margin-bottom: 20px;" >
+        <tr style="font-weight: bold; padding: 5px; background: #efefef; border: 3px solid #0a0a0a;" align="center">
+            <th style="border: 3px solid #0a0a0a;">Логин</th>
+            <th style="border: 3px solid #0a0a0a;">Роли</th>
+            <th style="border: 3px solid #0a0a0a;"></th>
+        </tr>
+        <tr th:each="el : ${user_list}"  style="border: 3px solid #0a0a0a; padding: 5px;" align="center">
+            <td th:text="${el.username}" style="border: 2px solid #0a0a0a;"></td>
+            <td style="border: 2px solid #0a0a0a;">
+                <div th:each="role : ${el.roles}">
+                    <p th:text="${role}"></p>
+                </div>
+            </td>
+            <td><a  th:href="'/admin/'+${el.id}" class="btn btn-info" style="border: 2px solid #0a0a0a; width: 50%;">Подробнее</a></td>
+        </tr>
+    </table>
+    <a href="/registration/admin" class="btn btn-success">Добавить пользователя</a>
+</div>
+
+</body>
+</html>

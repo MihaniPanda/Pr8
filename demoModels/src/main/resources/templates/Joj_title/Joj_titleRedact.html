@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Изминение должности</title>
+  <div th:insert="Header/header" ></div>
+</head>
+<body>
+<form  method="post" th:action="@{/jobtitle/edit/{id}(id=${jojTitles.id})}" th:object="${jojTitles}">
+  <input style="padding: 5px; margin: 5px;" type="text" name="namejob" placeholder="Название должности" th:value="*{namejob}" >
+  <div style="color: red" th:if="${#fields.hasErrors('namejob')}" th:errors="*{namejob}"></div><br />
+  <input style="padding: 5px; margin: 5px;" type="number" name="price" placeholder="Заработная плата" th:value="*{price}">
+  <div style="color: red" th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></div><br />
+
+  <br>
+  <button type="submit">Изменить данные должности</button>
+</form>
+<div style="padding-top: 13px;">
+  <form  th:action="@{/jobtitle/remove/{id}(id=${jojTitles.id})}" th:object="${jojTitles}" method="post">
+    <button type="submit" > Удалить </button>
+  </form>
+</div>
+</body>
+</html>

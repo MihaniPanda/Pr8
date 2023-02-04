@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Изминение адреса</title>
+    <div th:insert="Header/header" ></div>
+</head>
+<body>
+<form  method="post" th:action="@{/stock/edit/{id}(id=${stocke.id})}" th:object="${stocke}">
+    <input style="padding: 5px; margin: 5px;" type="text" name="adress" placeholder="Адресс" th:value="*{adress}" >
+    <div style="color: red" th:if="${#fields.hasErrors('adress')}" th:errors="*{adress}"></div><br />
+    <br>
+    <button type="submit">Изменить данные адреса</button>
+</form>
+<div style="padding-top: 13px;">
+    <form  th:action="@{/stock/remove/{id}(id=${stocke.id})}" th:object="${stocke}" method="post">
+        <button type="submit" > Удалить </button>
+    </form>
+</div>
+</body>
+</html>

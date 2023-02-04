@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Сертификаты</title>
+    <div th:insert="Header/header" ></div>
+</head>
+<body>
+<h1 style="text-align: center; margin-bottom: 30px;">Все сертификаты</h1>
+<table style="border-collapse: collapse; border: 2px solid #0a0a0a; width: 95%; margin-bottom: 20px;" >
+    <tr style="font-weight: bold; padding: 5px; background: #efefef; border: 3px solid #0a0a0a;" align="center">
+        <th style="border: 3px solid #0a0a0a;">Дата выдачи</th>
+        <th style="border: 3px solid #0a0a0a;">Наименование</th>
+        <th style="border: 3px solid #0a0a0a;"></th>
+    </tr>
+    <tr th:each="el : ${certificatee}"  style="border: 3px solid #0a0a0a; padding: 5px;" align="center">
+        <td th:text="${el.data}" style="border: 2px solid #0a0a0a;"></td>
+        <td th:text="${el.name}" style="border: 2px solid #0a0a0a;"></td>
+        <td><a th:href="'/certificate/edit/'+${el.id}" class="btn btn-info" style="border: 2px solid #0a0a0a; width: 100%;">Изменить</a></td>
+    </tr>
+</table>
+</body>
+</html>

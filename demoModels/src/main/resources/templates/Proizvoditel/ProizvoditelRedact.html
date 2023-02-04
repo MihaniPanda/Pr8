@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Изминение производителя</title>
+    <div th:insert="Header/header" ></div>
+</head>
+<body>
+<form  method="post" th:action="@{/proizvoditel/edit/{id}(id=${proizvoditels.id})}" th:object="${proizvoditels}">
+    <input style="padding: 5px; margin: 5px;" type="number" name="INN" placeholder="ИНН" th:value="*{INN}" >
+    <div style="color: red" th:if="${#fields.hasErrors('INN')}" th:errors="*{INN}"></div><br />
+    <input style="padding: 5px; margin: 5px;" type="text" name="name" placeholder="Наименование" th:value="*{name}" >
+    <div style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div><br />
+    <br>
+    <button type="submit">Изменить данные производителя</button>
+</form>
+<div style="padding-top: 13px;">
+    <form  th:action="@{/proizvoditel/remove/{id}(id=${proizvoditels.id})}" th:object="${proizvoditels}" method="post">
+        <button type="submit" > Удалить </button>
+    </form>
+</div>
+</body>
+</html>

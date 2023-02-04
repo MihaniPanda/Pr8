@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавление сотрудника</title>
+    <div th:insert="Header/header" ></div>
+</head>
+<body>
+<form th:action="${'/employee/add'}" th:object="${employers}" method="post">
+    <h1 style="text-align: center; margin-top: 10px">Добавление сотрудников</h1>
+
+    <h4 >Введите данные</h4>
+    <input style="padding: 5px; margin: 5px;"  type="text" name="surname" placeholder="Фамилия">
+    <div style="color: red" th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}"></div><br />
+    <input style="padding: 5px; margin: 5px;" type="text" name="name" placeholder="Имя">
+    <div style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div><br/>
+    <input style="padding: 5px; margin: 5px;" type="text" name="patronymic" placeholder="Отчество">
+    <div style="color: red" th:if="${#fields.hasErrors('patronymic')}" th:errors="*{patronymic}"></div><br/>
+    <input style="padding: 5px; margin: 5px;" type="date" name="datas" placeholder="Дата рождения">
+    <div style="color: red" th:if="${#fields.hasErrors('datas')}" th:errors="*{datas}"></div><br/>
+    <input style="padding: 5px; margin: 5px;" type="text" name="nomertelefona" placeholder="Номер телефона">
+    <div style="color: red" th:if="${#fields.hasErrors('nomertelefona')}" th:errors="*{nomertelefona}"></div><br/>
+    <p><input type="radio" value="true" checked name="vishka">Есть высшее образование</p>
+    <p><input type="radio" value="false" name="vishka">Нет высшего образования</p>
+    <p>Номер паспорта</p>
+    <select name="number">
+        <div th:each="element : ${passports}">
+            <option  th:text="${element.number}"></option>
+        </div>
+    </select>
+    <p>Должность</p>
+    <select name="namejob">
+        <div th:each="element : ${jojTitle}">
+            <option  th:text="${element.namejob}"></option>
+        </div>
+    </select>
+    <p>Пользователь</p>
+    <select style="margin-bottom: 10px;" name="username">
+        <div th:each="element : ${users}">
+            <option  th:text="${element.username}"></option>
+        </div>
+    </select><br/>
+
+    <button type="submit">Добавить сотрудника</button>
+</form>
+</body>
+</html>

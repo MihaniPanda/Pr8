@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Изминение типа</title>
+    <div th:insert="Header/header" ></div>
+</head>
+<body>
+<form  method="post" th:action="@{/type/edit/{id}(id=${types.id})}" th:object="${types}">
+    <input style="padding: 5px; margin: 5px;" type="text" name="namee" placeholder="Наименование" th:value="*{namee}" >
+    <div style="color: red" th:if="${#fields.hasErrors('namee')}" th:errors="*{namee}"></div><br />
+    <br>
+    <button type="submit">Изменить данные типа</button>
+</form>
+<div style="padding-top: 13px;">
+    <form  th:action="@{/type/remove/{id}(id=${types.id})}" th:object="${types}" method="post">
+        <button type="submit" > Удалить </button>
+    </form>
+</div>
+</body>
+</html>

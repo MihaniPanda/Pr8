@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Изминение пользователя</title>
+  <div th:insert="Header/header" ></div>
+</head>
+<body>
+
+<div >
+  <form method="post" >
+    <div>
+      <h2>Изменить никнейм</h2>
+      <input type="text" th:value="${user_object.username}" name="username">
+    </div>
+    <h2>Изменить права доступа</h2>
+    <div th:each="role : ${roles}">
+      <input type="checkbox" th:id="${role}"
+             th:name="${'roles[]'}" th:value="${role}"
+             th:checked="${#lists.contains(user_object.roles,role)}">
+
+      <label th:text="${role}"></label>
+    </div>
+    <button style="margin-bottom: 30px;" class="btn btn-success" type="submit">Изменить пользователя</button>
+  </form>
+
+  <a class="btn btn-success" th:href="'/admin/' + ${user_object.id}">Назад</a>
+</div>
+</body>
+</html>

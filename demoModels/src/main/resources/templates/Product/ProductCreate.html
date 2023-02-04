@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавление продукта</title>
+    <div th:insert="Header/header" ></div>
+</head>
+<body>
+<form th:action="${'/product/add'}" th:object="${products}" method="post">
+    <h1 style="text-align: center; margin-top: 10px">Добавление продукта</h1>
+
+    <h4 >Введите данные</h4>
+    <input style="padding: 5px; margin: 5px;"  type="text" name="country" placeholder="Страна">
+    <div style="color: red" th:if="${#fields.hasErrors('country')}" th:errors="*{country}"></div><br />
+    <input style="padding: 5px; margin: 5px;" type="date" name="dates" placeholder="Дата">
+    <div style="color: red" th:if="${#fields.hasErrors('dates')}" th:errors="*{dates}"></div><br/>
+    <input style="padding: 5px; margin: 5px;" type="text" name="description" placeholder="Описание">
+    <div style="color: red" th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></div><br/>
+    <input style="padding: 5px; margin: 5px;" type="text" name="nameproduct" placeholder="Наименование продукта">
+    <div style="color: red" th:if="${#fields.hasErrors('nameproduct')}" th:errors="*{nameproduct}"></div><br/>
+    <input style="padding: 5px; margin: 5px;" type="number" name="price" placeholder="Цена">
+    <div style="color: red" th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></div><br/>
+    <!--<p>Наименование организации поставщика</p>
+    <select name="name">
+        <div th:each="element : ${proizvoditels}">
+            <option  th:text="${element.name}"></option>
+        </div>
+    </select>
+    <p>Тип продукта</p>
+    <select name="namee">
+        <div th:each="element : ${types}">
+            <option  th:text="${element.namee}"></option>
+        </div>
+    </select><br/>-->
+    <button type="submit">Добавить продукт</button>
+</form>
+</body>
+</html>

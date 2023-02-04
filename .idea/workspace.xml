@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ee9f5521-e582-421b-a251-124f45fb7ef2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demoModels/src/main/java/com/example/demoModels/Controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demoModels/src/main/java/com/example/demoModels/Controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demoModels/src/main/java/com/example/demoModels/Models/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/demoModels/src/main/java/com/example/demoModels/Models/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demoModels/src/main/resources/templates/Employee/MainPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/demoModels/src/main/resources/templates/Employee/MainPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demoModels/target/classes/com/example/demoModels/Controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demoModels/target/classes/com/example/demoModels/Controllers/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demoModels/target/classes/templates/Employee/MainPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/demoModels/target/classes/templates/Employee/MainPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demoModels/target/classes/templates/parts/header.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demoModels/target/classes/templates/parts/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/demoModels/target/classes/templates/parts/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demoModels/target/classes/templates/parts/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/demoModels/target/classes/templates/parts/info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demoModels/target/classes/templates/parts/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/demoModels/target/classes/templates/parts/update.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2HtiQDDkHdy0uculsvgmvX1b2um" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/All_project/SpringProjects-pr2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Perforce&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;71c82925b7df90246bc7980f3c0f7873&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\All_project\SpringProjects-pr2\demoModels\src\main\java\com\example\demoModels\Models" />
+      <recent name="C:\All_project\Ych.Practika — копия\SpringProjects-pr2\demoModels\src\main\resources\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\All_project\SpringProjects-pr2\demoModels\src\main\resources\templates\Header" />
+      <recent name="C:\All_project\Ych.Practika — копия\SpringProjects-pr2\demoModels\src\main\resources\templates\parts" />
+      <recent name="C:\All_project\Ych.Practika — копия\SpringProjects-pr2\demoModels\src\main\resources\templates\Product" />
+      <recent name="C:\All_project\Ych.Practika — копия\SpringProjects-pr2\demoModels\src\main\resources\templates\Employee" />
+      <recent name="C:\All_project\Ych.Practika — копия\SpringProjects-pr2\demoModels\src\main\resources\templates\Pod" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="DemoModelsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="demoModels" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demoModels.DemoModelsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ee9f5521-e582-421b-a251-124f45fb7ef2" name="Changes" comment="" />
+      <created>1669110761403</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1669110761403</updated>
+      <workItem from="1669110762630" duration="4136000" />
+      <workItem from="1669214254745" duration="20342000" />
+      <workItem from="1669268967921" duration="22066000" />
+      <workItem from="1669356500905" duration="4044000" />
+      <workItem from="1669584615382" duration="39313000" />
+      <workItem from="1669786070893" duration="34079000" />
+      <workItem from="1669883468574" duration="512000" />
+      <workItem from="1669938507467" duration="2768000" />
+      <workItem from="1669959471864" duration="5680000" />
+      <workItem from="1670309077395" duration="1457000" />
+      <workItem from="1670310862229" duration="22137000" />
+      <workItem from="1670375457889" duration="408000" />
+      <workItem from="1670375892265" duration="20148000" />
+      <workItem from="1670411673956" duration="2363000" />
+      <workItem from="1673941922791" duration="9621000" />
+      <workItem from="1674025645699" duration="6995000" />
+      <workItem from="1674118098905" duration="16560000" />
+      <workItem from="1674909329730" duration="12658000" />
+      <workItem from="1675449921514" duration="20276000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

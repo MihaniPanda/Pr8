@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Изминение продукта</title>
+    <div th:insert="Header/header" ></div>
+</head>
+<body>
+<form  method="post" th:action="@{/product/edit/{id}(id=${producte.id})}" th:object="${producte}">
+    <input style="padding: 5px; margin: 5px;" type="text" name="country" placeholder="Страна" th:value="*{country}" >
+    <div style="color: red" th:if="${#fields.hasErrors('country')}" th:errors="*{country}"></div><br />
+    <input style="padding: 5px; margin: 5px;" type="date" name="dates" placeholder="Дата" th:value="*{dates}" >
+    <div style="color: red" th:if="${#fields.hasErrors('dates')}" th:errors="*{dates}"></div><br />
+    <input style="padding: 5px; margin: 5px;" type="text" name="description" placeholder="Описание" th:value="*{description}" >
+    <div style="color: red" th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></div><br />
+    <input style="padding: 5px; margin: 5px;" type="text" name="nameproduct" placeholder="Наименование продукта" th:value="*{nameproduct}" >
+    <div style="color: red" th:if="${#fields.hasErrors('nameproduct')}" th:errors="*{nameproduct}"></div><br />
+    <input style="padding: 5px; margin: 5px;" type="number" name="price" placeholder="Наименование" th:value="*{price}" >
+    <div style="color: red" th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></div><br />
+    <br>
+    <button type="submit">Изменить данные продукта</button>
+</form>
+<div style="padding-top: 13px;">
+    <form  th:action="@{/product/remove/{id}(id=${producte.id})}" th:object="${producte}" method="post">
+        <button type="submit" > Удалить </button>
+    </form>
+</div>
+</body>
+</html>

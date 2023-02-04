@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Добавление должности</title>
+  <div th:insert="Header/header" ></div>
+</head>
+<body>
+<form th:action="${'/jobtitle/add'}" th:object="${jojTitle}" method="post">
+  <h1 style="text-align: center; margin-top: 10px">Добавление должности</h1>
+
+  <h4 >Введите данные</h4>
+  <input style="padding: 5px; margin: 5px;"  type="text" name="namejob" placeholder="Название должности">
+  <div style="color: red" th:if="${#fields.hasErrors('namejob')}" th:errors="*{namejob}"></div><br />
+  <input style="padding: 5px; margin: 5px;" type="number" name="price" placeholder="Заработная плата">
+  <div style="color: red" th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></div><br/>
+  <button type="submit">Добавить должность</button>
+</form>
+</body>
+</html>

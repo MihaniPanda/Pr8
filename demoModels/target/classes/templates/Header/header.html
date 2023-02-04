@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
+
+
+<head>
+    <title>Title</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+
+    <! Ссылки на подключение будстрапа -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/headers/">
+    <! Скрипты для подключение будстрапа -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<header class="py-3 mb-3 border-bottom"  >
+    <nav class="navbar  navbar-expand-lg fixed-top navbar-light bg-light"  >
+        <div class="container-fluid"  >
+            <a class="navbar-brand mt-2 mt-lg-0" href="/">
+                <img
+                        src="https://ic.wampi.ru/2022/11/24/pngwing.com.png"
+                        height="50"
+                        alt="Panda Logo"
+                        loading="lazy"
+                />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a style="font-weight: bolder; font-size: 28px;font-style: italic;" class="navbar-brand" href="#">Vapeshop Panda</a>
+                <ul th:if="${#strings.contains(#request.userPrincipal,'ADMIN')}" class="navbar-nav me-auto mb-2 mb-lg-0" >
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-expanded="false">Пользователи</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/admin/a">Все пользоватеди</a></li>
+                            <li><a href="/registration/admin" class="dropdown-item" >Добавить пользователя</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-expanded="false">Сотрудники</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/employee">Все сотрудники</a></li>
+                            <li><a class="dropdown-item" href="/employee/add">Добавить сотрудника</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul  th:if="${#strings.contains(#request.userPrincipal,'USER')}" class="navbar-nav me-auto mb-2 mb-lg-0" >
+                    <li  class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button" data-toggle="dropdown" aria-expanded="false">Должности</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/jobtitle">Все должности</a></li>
+                            <li><a class="dropdown-item" href="/jobtitle/add">Добавить должность</a></li>
+                        </ul>
+                    </li>
+                    <li  class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown7" role="button" data-toggle="dropdown" aria-expanded="false">Паспорта</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/passport">Все паспорта</a></li>
+                            <li><a class="dropdown-item" href="/passport/add">Добавить паспорт</a></li>
+                        </ul>
+                    </li>
+                    <li  class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown8" role="button" data-toggle="dropdown" aria-expanded="false">Сертификаты</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/certificate">Все сертификаты</a></li>
+                            <li><a class="dropdown-item" href="/certificate/add">Добавить сертификат</a></li>
+                        </ul>
+                    </li>
+                    <li  class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown10" role="button" data-toggle="dropdown" aria-expanded="false">Склады</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/stock">Все склады</a></li>
+                            <li><a class="dropdown-item" href="/stock/add">Добавить склад</a></li>
+                        </ul>
+                    </li>
+                    <li  class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown11" role="button" data-toggle="dropdown" aria-expanded="false">Типы</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/type">Все типы</a></li>
+                            <li><a class="dropdown-item" href="/type/add">Добавить тип</a></li>
+                        </ul>
+                    </li>
+                    <li  class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown12" role="button" data-toggle="dropdown" aria-expanded="false">Произвдители</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/proizvoditel">Все производители</a></li>
+                            <li><a class="dropdown-item" href="/proizvoditel/add">Добавить производителя</a></li>
+                        </ul>
+                    </li>
+                    <li  class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown13" role="button" data-toggle="dropdown" aria-expanded="false">Поставщики</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/postavshik">Все поставщики</a></li>
+                            <li><a class="dropdown-item" href="/postavshik/add">Добавить поставщика</a></li>
+                        </ul>
+                    </li>
+                    <li  class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown14" role="button" data-toggle="dropdown" aria-expanded="false">Продукты</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/product">Все продукты</a></li>
+                            <li><a class="dropdown-item" href="/product/add">Добавить продукт</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <ul th:if="${#strings.contains(#request.userPrincipal,'USER')}" class="navbar-nav mb-2 mb-lg-0" >
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown6" role="button" data-toggle="dropdown" aria-expanded="false"><img src="https://flyclipart.com/thumb2/access-authorize-entrance-log-in-open-account-register-user-935670.png" alt="mdo" width="42" height="32" class="rounded-circle"></a>
+                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <!--<li><a class="dropdown-item" href="/admin/a">Перейти в режим админа</a></li>-->
+                            <form th:action="@{/logout}" method="post">
+                                <li ><button type="submit" class="dropdown-item" >Выйти из аккаунта</button></li>
+                            </form>
+                        </ul>
+                    </li>
+                </ul>
+                <ul th:if="${#strings.contains(#request.userPrincipal,'ADMIN')}" class="navbar-nav mb-2 mb-lg-0" >
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-expanded="false"><img src="https://flyclipart.com/thumb2/access-authorize-entrance-log-in-open-account-register-user-935670.png" alt="mdo" width="42" height="32" class="rounded-circle"></a>
+                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <!--<li><a class="dropdown-item" href="/admin/a">Перейти в обычный режим</a></li>-->
+                            <form th:action="@{/logout}" method="post">
+                                <li ><button type="submit" class="dropdown-item" >Выйти из аккаунта</button></li>
+                            </form>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<body style="background-color: #BDECB6;">
+<div  style="padding: 20px;"></div>
+</body>
+</html>

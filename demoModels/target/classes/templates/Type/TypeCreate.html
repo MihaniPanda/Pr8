@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавление типа</title>
+    <div th:insert="Header/header" ></div>
+</head>
+<body>
+<form th:action="${'/type/add'}" th:object="${typee}" method="post">
+    <h1 style="text-align: center; margin-top: 10px">Добавление типа</h1>
+
+    <h4 >Введите данные</h4>
+    <input style="padding: 5px; margin: 5px;"  type="text" name="namee" placeholder="Наименование">
+    <div style="color: red" th:if="${#fields.hasErrors('namee')}" th:errors="*{namee}"></div><br />
+    <button type="submit">Добавить типы</button>
+</form>
+</body>
+</html>
